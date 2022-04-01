@@ -1,0 +1,95 @@
+POST http://localhost:8080/subscribe
+Content-Type: application/json
+
+{
+  "tableId": 1,
+  "customer": {
+    "custId": 1,
+    "name": "Seiji"
+  }
+}
+
+
+###
+
+POST http://localhost:8080/subscribe
+Content-Type: application/json
+
+{
+  "tableId": 1,
+  "customer": {
+    "custId": 3,
+    "name": "Domino",
+    "orderItems": []
+  }
+}
+
+###
+
+POST http://localhost:8080/placeCustOrder
+Content-Type: application/json
+
+{
+  "tableId": 1,
+  "custId": 3, 
+  "items": [
+    {
+      "pid": "4fb41e53-dc78-4b77-9f5d-eb603f623017",
+      "qty": 3
+    },
+    {
+      "pid": "2f0e0ca5-9cc3-495d-b7f8-80a411e675b7",
+      "qty": 1
+    }
+  ]
+}
+
+
+###
+
+POST http://localhost:8080/placeCustOrder
+Content-Type: application/json
+
+{
+  "tableId": 1,
+  "custId": 1, 
+  "items": [
+    {
+      "pid": "4fb41e53-dc78-4b77-9f5d-eb603f623017",
+      "qty": 3
+    },
+    {
+      "pid": "2f0e0ca5-9cc3-495d-b7f8-80a411e675b7",
+      "qty": 1
+    }
+  ]
+}
+
+###
+
+POST http://localhost:8080/checkout
+Content-Type: application/json
+
+{
+  "tableId": 1
+}
+
+
+###
+
+POST http://localhost:8080/checkout-customer
+Content-Type: application/json
+
+{
+  "tableId": 1,
+  "custId": 3
+}
+
+###
+
+
+GET http://localhost:8080/test
+Content-Type: application/json
+
+
+###

@@ -1,0 +1,14 @@
+1. init y
+
+// TS transpiler
+2. install --save-dev typescript@4
+3. setup tsconfig.json (transpile to dist/index.js)
+
+// Lint
+4. install --save-dev tslint
+5. setup tslint.json
+
+// Update entrypoint
+6. package.json::main => dist/index.js
+
+// For every package you get, install the @types/<pkg-name> to support ts.
