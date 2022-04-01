@@ -1,6 +1,10 @@
 # sushi-place-api
 A simple sushi restaurant api that can keep track of restaruant table, its order information, and products on runtime.
 
+Things to do after cloning:
+  - Using psql: \ir &PROJECT_ROOT/src/db/schema.sql
+  - change username and password in &PROJECT_ROOT/src/db/index.ts
+
 Main Flow: 
   - Occupy Table
   - Customer subscribes and adds customer info and order items in table order.
@@ -23,5 +27,5 @@ Failed:
   - Store Order information in DB.
   - Use JWT to send tableId and custId but it's already 1st of April and I still have a lot of things I want to do other than this (Rust).
 
-Message to future self??
+Message to future self(??):
   Reorganize classes. Reject high coupling, embrace high cohesion. Stop overusing static methods.
